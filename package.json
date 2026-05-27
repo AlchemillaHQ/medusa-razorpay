@@ -1,0 +1,61 @@
+{
+    "name": "@alchemilla/medusa-razorpay",
+    "version": "0.1.0",
+    "description": "Razorpay payment provider for Medusa v2. Supports INR, USD, and 100+ currencies with webhook handling.",
+    "author": "",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "files": [
+        ".medusa/server"
+    ],
+    "exports": {
+        "./package.json": "./package.json",
+        "./providers/*": "./.medusa/server/src/providers/*/index.js",
+        "./*": "./.medusa/server/src/*.js"
+    },
+    "keywords": [
+        "medusa",
+        "medusa-v2",
+        "medusa-plugin",
+        "medusa-provider",
+        "medusa-payment",
+        "razorpay",
+        "payment",
+        "payment-gateway",
+        "india"
+    ],
+    "scripts": {
+        "build": "medusa plugin:build",
+        "dev": "medusa plugin:develop",
+        "typecheck": "tsc --noEmit",
+        "prepublishOnly": "medusa plugin:build"
+    },
+    "dependencies": {
+        "razorpay": "^2.9.6"
+    },
+    "peerDependencies": {
+        "@medusajs/framework": "^2.0.0",
+        "@medusajs/medusa": "^2.0.0"
+    },
+    "devDependencies": {
+        "@medusajs/admin-sdk": "^2.0.0",
+        "@medusajs/admin-shared": "^2.0.0",
+        "@medusajs/cli": "^2.0.0",
+        "@medusajs/framework": "^2.0.0",
+        "@medusajs/medusa": "^2.0.0",
+        "@medusajs/ui": "^4.0.0",
+        "@types/node": "^20.0.0",
+        "@types/react": "^18.3.2",
+        "@types/react-dom": "^18.2.25",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "typescript": "^5.6.2",
+        "vite": "^5.4.14"
+    },
+    "engines": {
+        "node": ">=20"
+    }
+}
